@@ -5,13 +5,7 @@ import { Post } from './post';
   providedIn: 'root',
 })
 export class PostsService {
-  posts: Post[] = [
-    {
-      id: 0,
-      title: 'Test',
-      text: 'Test',
-    },
-  ];
+  posts: Post[] = [];
 
   constructor() {}
 
