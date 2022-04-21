@@ -7,10 +7,18 @@
   height: 10%;
 }
 
-.wrapper {
+.text-wrapper {
   width: 100%;
   height: 90%;
   display: flex;
+  flex-direction: column;
+}
+
+.card-wrapper {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -31,7 +39,7 @@ a {
 
 .add-button {
   padding: 5px;
-  position: absolute;
+  position: fixed;
   bottom: 5%;
   right: 2%;
 }

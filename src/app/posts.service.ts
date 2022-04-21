@@ -24,15 +24,14 @@ export class PostsService {
   }
 
   getOnePost(postId) {
-    // return this.posts.find((post) => post.id === postId);
     return this.posts[postId];
   }
 
-  changePost(newPost) {
-    this.posts[newPost.id] = newPost;
+  changePost(post) {
+    this.posts[post.id] = post;
   }
 
-  deletePost(postId) {
-    this.posts.splice(postId, 1);
+  deletePost(post) {
+    this.posts.splice(post.id, 1);
   }
 }
