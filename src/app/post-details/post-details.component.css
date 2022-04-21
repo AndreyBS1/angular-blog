@@ -1,0 +1,45 @@
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-section {
+  height: 10%;
+}
+
+.input-section {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-input,
+.text-input {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.title-input {
+  height: 20%;
+}
+
+.text-input {
+  height: 70%;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+textarea {
+  height: 100%;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}

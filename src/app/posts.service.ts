@@ -18,11 +18,15 @@ export class PostsService {
   }
 
   getOnePost(postId) {
-    return this.posts.find((post) => post.id === postId);
+    // return this.posts.find((post) => post.id === postId);
+    return this.posts[postId];
   }
 
-  clearPosts() {
-    this.posts = [];
-    return this.posts;
+  changePost(newPost) {
+    this.posts[newPost.id] = newPost;
+  }
+
+  deletePost(postId) {
+    this.posts.splice(postId, 1);
   }
 }

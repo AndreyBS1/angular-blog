@@ -1,11 +1,14 @@
 <h2>Блог</h2>
 
-<div *ngFor="let post of posts">
-  <p>Check</p>
-  <p *ngIf="post">
-    {{ post.title }}
-  </p>
-  <!-- <app-post-details></app-post-details> -->
+<div *ngIf="posts.length < 1">
+  <h2>Нет ни одного поста!</h2>
+  <h3>Нажмите кнопку "Добавить", чтобы создать пост.</h3>
+</div>
+
+<div *ngIf="posts.length > 0">
+  <div *ngFor="let post of posts">
+    <app-post-card></app-post-card>
+  </div>
 </div>
 
 <a routerLink="post/new">

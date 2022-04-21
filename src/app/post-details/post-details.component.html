@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="button-section">
+    <a routerLink=""> <button>Назад</button></a>
+  </div>
+  <div class="input-section">
+    <div class="title-input">
+      <h3>Запись {{ post.id }} {{ post.title }}</h3>
+      <input [(ngModel)]="post.title" type="text" />
+    </div>
+    <div class="text-input">
+      <textarea [(ngModel)]="post.text">{{ post.text }}</textarea>
+    </div>
+  </div>
+  <div class="button-section bottom">
+    <button (click)="delete(post)">Удалить</button>
+    <button (click)="save(post)">Сохранить</button>
+  </div>
+</div>
