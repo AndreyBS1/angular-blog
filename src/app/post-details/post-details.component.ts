@@ -41,8 +41,11 @@ export class PostDetailsComponent implements OnInit {
     if (this.isNewPost) {
       window.alert('Нельзя удалить несуществующий пост!');
     } else {
-      this.postsService.deletePost(this.post);
-      this.router.navigate(['']);
+      const result = window.confirm('Вы уверены?');
+      if (result) {
+        this.postsService.deletePost(this.post);
+        this.router.navigate(['']);
+      }
     }
   }
 
