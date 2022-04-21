@@ -4,8 +4,8 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import { PostsListComponent } from './posts-list/posts-list.component';
+import { PostCardComponent } from './post-card/post-card.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
 
 @NgModule({
@@ -20,8 +20,8 @@ import { PostDetailsComponent } from './post-details/post-details.component';
   ],
   declarations: [
     AppComponent,
-    HelloComponent,
     PostsListComponent,
+    PostCardComponent,
     PostDetailsComponent,
   ],
   bootstrap: [AppComponent],

@@ -1,0 +1,12 @@
+.add-button {
+  padding: 5px;
+  position: absolute;
+  top: 90%;
+  left: 70%;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: black;
+}
