@@ -1,21 +1,21 @@
-<div class="container">
+<div class="post-container">
   <div class="wrapper">
-    <div class="button-section">
+    <div class="button-wrapper">
       <button (click)="back()">Назад</button>
     </div>
-    <div class="input-section">
-      <h3 class="title">Запись "{{ post.title || 'Новый пост' }}"</h3>
+    <div class="input-wrapper">
+      <h3 class="post-title">Запись "{{ post.title || 'Новый пост' }}"</h3>
       <input
-        class="input"
+        class="post-input"
         placeholder="Заголовок"
         [(ngModel)]="post.title"
         [value]="post.title"
       />
-      <textarea class="input" placeholder="Текст" [(ngModel)]="post.text">
+      <textarea class="post-input" placeholder="Текст" [(ngModel)]="post.text">
         {{ post.text }}
       </textarea>
     </div>
-    <div class="section button-section bottom">
+    <div class="button-wrapper bottom">
       <button (click)="delete()" [disabled]="isNewPost">Удалить</button>
       <button (click)="save()">Сохранить</button>
     </div>

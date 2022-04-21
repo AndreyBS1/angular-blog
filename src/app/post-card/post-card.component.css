@@ -7,28 +7,28 @@
   align-items: center;
 }
 
-.post-title,
-.post-text,
-.post-button {
+.card-title,
+.card-text,
+.card-button {
   width: 100%;
   margin: 5px 0;
   display: flex;
 }
 
-.post-title {
+.card-title {
   height: 10%;
   justify-content: center;
   align-items: center;
 }
 
-.post-title h4 {
+.card-title h4 {
   width: 90%;
   height: 100%;
   text-align: center;
   overflow: hidden;
 }
 
-.post-text {
+.card-text {
   height: 75%;
   border: solid 1px black;
   background-color: whitesmoke;
@@ -36,7 +36,7 @@
   align-items: flex-start;
 }
 
-.post-text p {
+.card-text p {
   padding: 0 10px;
   overflow: hidden;
 }
@@ -47,13 +47,13 @@ a {
   color: black;
 }
 
-.post-button {
+.card-button {
   height: 15%;
   justify-content: center;
   align-items: center;
 }
 
-.post-button button {
+.card-button button {
   width: 100%;
   height: 100%;
   padding: 5px;

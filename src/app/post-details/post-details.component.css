@@ -1,4 +1,4 @@
-.container {
+.post-container {
   height: 100%;
   width: 100%;
 }
@@ -10,29 +10,29 @@
   flex-direction: column;
 }
 
-.button-section,
-.input-section {
+.button-wrapper,
+.input-wrapper {
   width: 100%;
   display: flex;
 }
 
-.button-section {
+.button-wrapper {
   height: 10%;
   justify-content: flex-start;
   align-items: center;
 }
 
-.input-section {
+.input-wrapper {
   height: 80%;
   flex-direction: column;
 }
 
-.title,
-.input {
+.post-title,
+.post-input {
   margin: 10px 0;
 }
 
-.title {
+.post-title {
   height: 10%;
 }
 

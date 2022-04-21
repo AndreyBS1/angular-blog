@@ -1,13 +1,13 @@
 <div class="card-container">
-  <div class="post-title">
+  <div class="card-title">
     <h4>{{ post.title }}</h4>
   </div>
 
-  <div class="post-text">
+  <div class="card-text">
     <p>{{ post.text }}</p>
   </div>
 
-  <a class="post-button" [routerLink]="['post', post.id]">
+  <a class="card-button" [routerLink]="['post', post.id]">
     <button>Перейти</button>
   </a>
 </div>
