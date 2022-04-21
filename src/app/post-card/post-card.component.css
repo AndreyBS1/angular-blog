@@ -38,6 +38,7 @@
 
 .card-text p {
   padding: 0 10px;
+  max-height: 70%;
   overflow: hidden;
 }
 
