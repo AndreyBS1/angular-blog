@@ -1,18 +1,23 @@
 <div class="container">
-  <div class="button-section">
-    <a routerLink=""> <button>Назад</button></a>
-  </div>
-  <div class="input-section">
-    <div class="title-input">
-      <h3>Запись {{ post.id }} {{ post.title }}</h3>
-      <input [(ngModel)]="post.title" [value]="post.title" type="text" />
+  <div class="wrapper">
+    <div class="button-section">
+      <button (click)="back()">Назад</button>
     </div>
-    <div class="text-input">
-      <textarea [(ngModel)]="post.text">{{ post.text }}</textarea>
+    <div class="input-section">
+      <h3 class="title">Запись "{{ post.title || 'Новый пост' }}"</h3>
+      <input
+        class="input"
+        placeholder="Заголовок"
+        [(ngModel)]="post.title"
+        [value]="post.title"
+      />
+      <textarea class="input" placeholder="Текст" [(ngModel)]="post.text">
+        {{ post.text }}
+      </textarea>
     </div>
-  </div>
-  <div class="button-section bottom">
-    <button (click)="delete(post)" [disabled]="isNewPost">Удалить</button>
-    <button (click)="save(post)">Сохранить</button>
+    <div class="section button-section bottom">
+      <button (click)="delete()" [disabled]="isNewPost">Удалить</button>
+      <button (click)="save()">Сохранить</button>
+    </div>
   </div>
 </div>

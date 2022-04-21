@@ -24,7 +24,12 @@ export class PostsService {
   }
 
   getOnePost(postId) {
-    return this.posts[postId];
+    const post = {
+      id: this.posts[postId].id,
+      title: this.posts[postId].title,
+      text: this.posts[postId].text,
+    };
+    return post;
   }
 
   changePost(post) {

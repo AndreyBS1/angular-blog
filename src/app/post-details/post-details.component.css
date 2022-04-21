@@ -1,45 +1,57 @@
 .container {
   height: 100%;
   width: 100%;
-  padding: 5px;
+}
+
+.wrapper {
+  height: 100%;
+  padding: 0 10%;
   display: flex;
   flex-direction: column;
+}
+
+.button-section,
+.input-section {
+  width: 100%;
+  display: flex;
 }
 
 .button-section {
   height: 10%;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .input-section {
   height: 80%;
-  display: flex;
   flex-direction: column;
 }
 
-.title-input,
-.text-input {
-  width: 100%;
-  padding: 5px 0;
+.title,
+.input {
+  margin: 10px 0;
 }
 
-.title-input {
-  height: 20%;
-}
-
-.text-input {
-  height: 70%;
+.title {
+  height: 10%;
 }
 
 input,
 textarea {
-  width: 100%;
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+input {
+  height: 5%;
 }
 
 textarea {
-  height: 100%;
+  height: 85%;
+  resize: none;
 }
 
 .bottom {
-  display: flex;
   justify-content: space-between;
 }

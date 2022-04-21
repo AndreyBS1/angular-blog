@@ -19,13 +19,17 @@ export class PostDetailsComponent implements OnInit {
     private postsService: PostsService
   ) {}
 
-  save(post) {
+  back() {
+    this.router.navigate(['']);
+  }
+
+  save() {
     if (!this.isNewPost) {
-      this.postsService.changePost(post);
+      this.postsService.changePost(this.post);
       this.router.navigate(['']);
     } else {
-      if (post.title && post.text) {
-        this.postsService.addPost(post);
+      if (this.post.title && this.post.text) {
+        this.postsService.addPost(this.post);
         this.router.navigate(['']);
       } else {
         window.alert('Пожалуйста, заполните все поля!');
@@ -33,11 +37,11 @@ export class PostDetailsComponent implements OnInit {
     }
   }
 
-  delete(post) {
+  delete() {
     if (this.isNewPost) {
       window.alert('Нельзя удалить несуществующий пост!');
     } else {
-      this.postsService.deletePost(post);
+      this.postsService.deletePost(this.post);
       this.router.navigate(['']);
     }
   }
@@ -55,9 +59,8 @@ export class PostDetailsComponent implements OnInit {
       const postIdFromRoute = Number(routeParams.get('postId'));
       this.post = this.postsService.getOnePost(postIdFromRoute);
     } else {
-      const newPostId = this.postsService.getAllPosts().length;
       this.post = {
-        id: newPostId,
+        id: this.postsService.getAllPosts().length,
         title: '',
         text: '',
       };
