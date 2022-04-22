@@ -16,7 +16,9 @@
       </textarea>
     </div>
     <div class="button-wrapper bottom">
-      <button (click)="delete()" [disabled]="isNewPost">Удалить</button>
+      <button class="delete-button" (click)="delete()" [disabled]="isNewPost">
+        Удалить
+      </button>
       <button (click)="save()">Сохранить</button>
     </div>
   </div>

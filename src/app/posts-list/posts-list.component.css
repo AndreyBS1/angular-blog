@@ -49,8 +49,20 @@ a {
 }
 
 .add-button {
-  padding: 5px;
+  /* padding: 5px; */
   position: fixed;
   bottom: 5%;
   right: 2%;
+}
+
+button {
+  width: 100px;
+  height: 35px;
+  background-color: rgb(217, 217, 248);
+  border: solid 2px rgb(193, 193, 248);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
 }

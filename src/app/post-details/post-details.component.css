@@ -56,3 +56,20 @@ textarea {
 .bottom {
   justify-content: space-between;
 }
+
+button {
+  width: 100px;
+  height: 35px;
+  background-color: rgb(217, 217, 248);
+  border: solid 2px rgb(193, 193, 248);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+}
+
+.delete-button {
+  background-color: rgb(255, 163, 163);
+  border-color: rgb(252, 134, 134);
+}
