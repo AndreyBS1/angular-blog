@@ -12,6 +12,32 @@
 .modal {
   width: 50%;
   height: 50%;
+  padding: 0 15px;
+  background-color: whitesmoke;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-wrapper,
+.input-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.button-wrapper {
+  height: 10%;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-wrapper {
+  height: 80%;
+  margin: 10px 0;
+  flex-direction: column;
 }
 
 input,
@@ -19,6 +45,7 @@ textarea {
   border: solid 1px black;
   border-radius: 5px;
   padding: 10px;
+  margin: 10px 0;
 }
 
 input {
@@ -28,4 +55,16 @@ input {
 textarea {
   height: 85%;
   resize: none;
+}
+
+button {
+  width: 100px;
+  height: 35px;
+  background-color: rgb(217, 217, 248);
+  border: solid 2px rgb(193, 193, 248);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
 }

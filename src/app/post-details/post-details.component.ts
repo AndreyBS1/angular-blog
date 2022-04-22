@@ -11,7 +11,6 @@ import { Post } from '../post';
 })
 export class PostDetailsComponent implements OnInit {
   post: Post | undefined;
-  isNewPost: Boolean;
 
   constructor(
     private router: Router,
@@ -24,50 +23,22 @@ export class PostDetailsComponent implements OnInit {
   }
 
   save() {
-    if (!this.isNewPost) {
-      // this.postsService.changePost(this.post);
-      this.postsService.posts[this.post.id] = this.post;
-      this.router.navigate(['']);
-    } else {
-      // if (this.post.title && this.post.text) {
-      this.postsService.addPost(this.post);
-      this.router.navigate(['']);
-      // } else {
-      //   window.alert('Пожалуйста, заполните все поля!');
-      // }
-    }
+    this.postsService.posts[this.post.id] = this.post;
+    this.router.navigate(['']);
   }
 
   delete() {
-    // if (this.isNewPost) {
-    // window.alert('Нельзя удалить несуществующий пост!');
-    // } else {
     const result = window.confirm('Вы уверены?');
     if (result) {
       this.postsService.deletePost(this.post.id);
       this.router.navigate(['']);
     }
-    // }
   }
 
   ngOnInit() {
     const routeParams = this.route.snapshot.paramMap;
 
-    if (routeParams.get('postId')) {
-      this.isNewPost = false;
-    } else {
-      this.isNewPost = true;
-    }
-
-    if (!this.isNewPost) {
-      const postIdFromRoute = Number(routeParams.get('postId'));
-      this.post = this.postsService.getOnePost(postIdFromRoute);
-    } else {
-      this.post = {
-        id: this.postsService.getAllPosts().length,
-        title: '',
-        text: '',
-      };
-    }
+    const postIdFromRoute = Number(routeParams.get('postId'));
+    this.post = this.postsService.getOnePost(postIdFromRoute);
   }
 }

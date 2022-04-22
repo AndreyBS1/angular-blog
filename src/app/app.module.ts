@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { PostsListComponent } from './posts-list/posts-list.component';
 import { PostCardComponent } from './post-card/post-card.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
+import { ModalWindowComponent } from './modal-window/modal-window.component';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { PostDetailsComponent } from './post-details/post-details.component';
     PostsListComponent,
     PostCardComponent,
     PostDetailsComponent,
+    ModalWindowComponent,
   ],
   bootstrap: [AppComponent],
 })

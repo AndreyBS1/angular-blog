@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { PostsService } from '../posts.service';
 import { Post } from '../post';
@@ -9,15 +9,20 @@ import { Post } from '../post';
   styleUrls: ['./modal-window.component.css'],
 })
 export class ModalWindowComponent implements OnInit {
+  @Output() close = new EventEmitter();
+
   post: Post | undefined;
 
   constructor(private postsService: PostsService) {}
 
   save() {
     this.postsService.addPost(this.post);
+    this.close.emit();
   }
 
-  cancel() {}
+  cancel() {
+    this.close.emit();
+  }
 
   ngOnInit() {
     this.post = {

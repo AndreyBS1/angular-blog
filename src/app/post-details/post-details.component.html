@@ -3,6 +3,7 @@
     <div class="button-wrapper">
       <button (click)="back()">Назад</button>
     </div>
+
     <div class="input-wrapper">
       <h3 class="post-title">Запись "{{ post.title || 'Новый пост' }}"</h3>
       <input
@@ -15,10 +16,9 @@
         {{ post.text }}
       </textarea>
     </div>
+
     <div class="button-wrapper bottom">
-      <button class="delete-button" (click)="delete()" [disabled]="isNewPost">
-        Удалить
-      </button>
+      <button class="delete-button" (click)="delete()">Удалить</button>
       <button (click)="save()">Сохранить</button>
     </div>
   </div>

@@ -9,11 +9,16 @@ import { PostsService } from '../posts.service';
 })
 export class PostsListComponent implements OnInit {
   posts = [];
+  modalVis = false;
 
   constructor(private postsService: PostsService, private router: Router) {}
 
-  add() {
-    this.router.navigate(['post/new']);
+  showModal() {
+    this.modalVis = true;
+  }
+
+  hideModal() {
+    this.modalVis = false;
   }
 
   ngOnInit(): void {

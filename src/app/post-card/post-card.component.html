@@ -1,10 +1,10 @@
 <div class="card-container">
   <div class="card-title">
-    <h4>{{ post.title || '*Заголовок*' }}</h4>
+    <h4>{{ post.title || '*Пустой пост*' }}</h4>
   </div>
 
   <div class="card-text">
-    <p>{{ post.text || '*Текст*' }}</p>
+    <p>{{ post.text }}</p>
   </div>
 
   <a class="card-button" [routerLink]="['post', post.id]">

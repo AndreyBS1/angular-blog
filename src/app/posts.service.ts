@@ -27,10 +27,6 @@ export class PostsService {
     return postCopy;
   }
 
-  // changePost(post) {
-  //   this.posts[post.id] = post;
-  // }
-
   deletePost(postId: number) {
     this.posts.splice(postId, 1);
   }

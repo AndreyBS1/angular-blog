@@ -7,10 +7,10 @@
         [value]="post.title"
       />
       <textarea placeholder="Текст" [(ngModel)]="post.text">
-      {{ post.text }} 
-    </textarea
-      >
+        {{ post.text }} 
+      </textarea>
     </div>
+
     <div class="button-wrapper">
       <button (click)="cancel()">Отмена</button>
       <button (click)="save()">Сохранить</button>
