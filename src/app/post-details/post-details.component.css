@@ -73,3 +73,11 @@ button:hover {
   background-color: rgb(255, 163, 163);
   border-color: rgb(252, 134, 134);
 }
+
+app-delete-modal-window {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

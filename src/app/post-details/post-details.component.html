@@ -18,8 +18,14 @@
     </div>
 
     <div class="button-wrapper bottom">
-      <button class="delete-button" (click)="delete()">Удалить</button>
+      <!-- <button class="delete-button" (click)="delete()">Удалить</button> -->
+      <button class="delete-button" (click)="showModal()">Удалить</button>
       <button (click)="save()">Сохранить</button>
     </div>
   </div>
+
+  <app-delete-modal-window
+    *ngIf="modalVis"
+    (isConfirmed)="hideModal($event)"
+  ></app-delete-modal-window>
 </div>

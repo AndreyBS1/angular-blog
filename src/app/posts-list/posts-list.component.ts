@@ -9,7 +9,7 @@ import { PostsService } from '../posts.service';
 })
 export class PostsListComponent implements OnInit {
   posts = [];
-  modalVis = false;
+  modalVis: boolean = false;
 
   constructor(private postsService: PostsService, private router: Router) {}
 

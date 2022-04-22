@@ -11,6 +11,7 @@ import { Post } from '../post';
 })
 export class PostDetailsComponent implements OnInit {
   post: Post | undefined;
+  modalVis: boolean = false;
 
   constructor(
     private router: Router,
@@ -28,11 +29,17 @@ export class PostDetailsComponent implements OnInit {
   }
 
   delete() {
-    const result = window.confirm('Вы уверены?');
-    if (result) {
-      this.postsService.deletePost(this.post.id);
-      this.router.navigate(['']);
-    }
+    this.postsService.deletePost(this.post.id);
+    this.router.navigate(['']);
+  }
+
+  showModal() {
+    this.modalVis = true;
+  }
+
+  hideModal(isConfirmed: Boolean) {
+    if (isConfirmed) this.delete();
+    this.modalVis = false;
   }
 
   ngOnInit() {

@@ -1,0 +1,58 @@
+.delete-modal-container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.delete-modal {
+  width: 50%;
+  height: 50%;
+  padding: 0 15px;
+  background-color: whitesmoke;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-wrapper,
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.text-wrapper {
+  height: 80%;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+.button-wrapper {
+  height: 10%;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+button {
+  width: 100px;
+  height: 35px;
+  background-color: rgb(217, 217, 248);
+  border: solid 2px rgb(193, 193, 248);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+}
+
+.delete-button {
+  background-color: rgb(255, 163, 163);
+  border-color: rgb(252, 134, 134);
+}
