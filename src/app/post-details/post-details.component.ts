@@ -29,25 +29,25 @@ export class PostDetailsComponent implements OnInit {
       this.postsService.posts[this.post.id] = this.post;
       this.router.navigate(['']);
     } else {
-      if (this.post.title && this.post.text) {
-        this.postsService.addPost(this.post);
-        this.router.navigate(['']);
-      } else {
-        window.alert('Пожалуйста, заполните все поля!');
-      }
+      // if (this.post.title && this.post.text) {
+      this.postsService.addPost(this.post);
+      this.router.navigate(['']);
+      // } else {
+      //   window.alert('Пожалуйста, заполните все поля!');
+      // }
     }
   }
 
   delete() {
-    if (this.isNewPost) {
-      window.alert('Нельзя удалить несуществующий пост!');
-    } else {
-      const result = window.confirm('Вы уверены?');
-      if (result) {
-        this.postsService.deletePost(this.post.id);
-        this.router.navigate(['']);
-      }
+    // if (this.isNewPost) {
+    // window.alert('Нельзя удалить несуществующий пост!');
+    // } else {
+    const result = window.confirm('Вы уверены?');
+    if (result) {
+      this.postsService.deletePost(this.post.id);
+      this.router.navigate(['']);
     }
+    // }
   }
 
   ngOnInit() {

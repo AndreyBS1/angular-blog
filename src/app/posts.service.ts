@@ -17,22 +17,21 @@ export class PostsService {
     return this.posts;
   }
 
-  getOnePost(postId) {
+  getOnePost(postId: number) {
     const post = this.posts.find((post) => post.id === postId);
-    // const postCopy = {
-    //   id: post.id,
-    //   title: post.title,
-    //   text: post.text,
-    // };
-    // return postCopy;
-    return post;
+    const postCopy = {
+      id: post.id,
+      title: post.title,
+      text: post.text,
+    };
+    return postCopy;
   }
 
   // changePost(post) {
   //   this.posts[post.id] = post;
   // }
 
-  deletePost(postId) {
+  deletePost(postId: number) {
     this.posts.splice(postId, 1);
   }
 }
