@@ -18,19 +18,21 @@ export class PostsService {
   }
 
   getOnePost(postId) {
-    const post = {
-      id: this.posts[postId].id,
-      title: this.posts[postId].title,
-      text: this.posts[postId].text,
-    };
+    const post = this.posts.find((post) => post.id === postId);
+    // const postCopy = {
+    //   id: post.id,
+    //   title: post.title,
+    //   text: post.text,
+    // };
+    // return postCopy;
     return post;
   }
 
-  changePost(post) {
-    this.posts[post.id] = post;
-  }
+  // changePost(post) {
+  //   this.posts[post.id] = post;
+  // }
 
-  deletePost(post) {
-    this.posts.splice(post.id, 1);
+  deletePost(postId) {
+    this.posts.splice(postId, 1);
   }
 }

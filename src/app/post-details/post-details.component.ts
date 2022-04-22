@@ -25,7 +25,8 @@ export class PostDetailsComponent implements OnInit {
 
   save() {
     if (!this.isNewPost) {
-      this.postsService.changePost(this.post);
+      // this.postsService.changePost(this.post);
+      this.postsService.posts[this.post.id] = this.post;
       this.router.navigate(['']);
     } else {
       if (this.post.title && this.post.text) {
@@ -43,7 +44,7 @@ export class PostDetailsComponent implements OnInit {
     } else {
       const result = window.confirm('Вы уверены?');
       if (result) {
-        this.postsService.deletePost(this.post);
+        this.postsService.deletePost(this.post.id);
         this.router.navigate(['']);
       }
     }
